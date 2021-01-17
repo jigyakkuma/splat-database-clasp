@@ -9,19 +9,19 @@ function lastUpdateSpecialPointCheck() {
         const updateRecord = lastUpdateRecord(record["weapon_name"]);
         if (updateRecord == undefined) {
             Logger.log(
-                `Nothing update ${record["weapon_name"]}: ${record["special_point"]}`
+                `Nothing update row:${record["rowNum"]} ${record["weapon_name"]}: ${record["special_point"]}`
             );
             return;
         }
         if (updateRecord["after_special_point"] != record["special_point"]) {
             Logger.log(
-                `failed ${record["rowNum"]}  ${record["weapon_name"]}: ${updateRecord["after_special_point"]} / ${record["special_point"]}`
+                `failed row:${record["rowNum"]} ${record["weapon_name"]}: ${updateRecord["after_special_point"]} / ${record["special_point"]}`
             );
             return;
         }
 
         Logger.log(
-            `success ${record["rowNum"]}  ${record["weapon_name"]}: ${record["special_point"]}`
+            `success row:${record["rowNum"]} ${record["weapon_name"]}: ${record["special_point"]}`
         );
     });
 
