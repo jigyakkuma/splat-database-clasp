@@ -8,5 +8,5 @@ import (
 func main() {
     http.Handle("/", http.FileServer(http.Dir("./dist")))
 
-    log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
