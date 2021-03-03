@@ -44,3 +44,4 @@ function lastUpdateSpecialPointCheck() {
         return rows[0];
     }
 }
+export { lastUpdateSpecialPointCheck };
