@@ -3,13 +3,13 @@ services:
     # service名
     app:
         # コンテナ名
-        container_name: sandbox-docker-compose
+        container_name: update-tool
         # イメージ名
-        image: sandbox-docker-compose
+        image: update-tool
         # ビルドに使用するDockerfileがあるディレクトリ指定
         build: .
         # マウントディレクトリ指定
         volumes:
             - .:/go/src/github.com/jigyakkuma/splat-dastabase/go-sample
         ports:
-            - "8002:8081"
+            - "8002:8080"
