@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    http.Handle("/", http.FileServer(http.Dir("./dist")))
+    http.Handle("/", http.FileServer(http.Dir("/app/dist")))
 
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
